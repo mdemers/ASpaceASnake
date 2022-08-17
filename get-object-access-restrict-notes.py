@@ -33,4 +33,4 @@ def write_notes_csv(csvName):
         writer.writeheader()
         get_restrictions(writer)
 
-write_notes_csv('../accessrestrict_notes.csv')
+write_notes_csv('../object_accessrestrict_notes.csv')

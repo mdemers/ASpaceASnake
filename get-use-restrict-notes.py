@@ -18,7 +18,7 @@ def get_restrictions(writer):
           except:
               restrictions = "Not found"
           for note in resource['notes']:
-            if 'type' in note and note['type'] == 'accessrestrict':
+            if 'type' in note and note['type'] == 'userestrict':
               try:
                 end_date = note['rights_restriction']['end']
               except:
@@ -33,4 +33,4 @@ def write_notes_csv(csvName):
         writer.writeheader()
         get_restrictions(writer)
 
-write_notes_csv('../accessrestrict_notes.csv')
+write_notes_csv('../userestrict_notes.csv')
